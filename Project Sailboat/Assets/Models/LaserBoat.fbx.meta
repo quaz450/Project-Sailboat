@@ -16,6 +16,20 @@ ModelImporter:
     100020: SailArmature
     100022: SailPole
     100024: SailPole.001
+    100026: node_id11
+    100028: node_id12
+    100030: node_id14
+    100032: node_id16
+    100034: node_id17
+    100036: node_id18
+    100038: node_id19
+    100040: node_id19 1
+    100042: node_id22
+    100044: node_id4
+    100046: node_id5
+    100048: node_id6
+    100050: node_id7
+    100052: node_id9
     400000: Bone
     400002: Bone_end
     400004: Hemi
@@ -29,20 +43,58 @@ ModelImporter:
     400020: SailArmature
     400022: SailPole
     400024: SailPole.001
+    400026: node_id11
+    400028: node_id12
+    400030: node_id14
+    400032: node_id16
+    400034: node_id17
+    400036: node_id18
+    400038: node_id19
+    400040: node_id19 1
+    400042: node_id22
+    400044: node_id4
+    400046: node_id5
+    400048: node_id6
+    400050: node_id7
+    400052: node_id9
     2100000: Sail
     2100002: SailPole
     2100004: HullBottom
     2100006: Hull
     2100008: Plastic
+    2100010: Material_37
+    2100012: Material_38
+    2100014: Material_39
+    2100016: Material_40
+    2100018: Material_41
+    2100020: Material_42
     2300000: HullBottom
     2300002: HullTop
+    2300004: node_id12
+    2300006: node_id14
+    2300008: node_id19
+    2300010: node_id19 1
+    2300012: node_id7
+    2300014: node_id9
     3300000: HullBottom
     3300002: HullTop
+    3300004: node_id12
+    3300006: node_id14
+    3300008: node_id19
+    3300010: node_id19 1
+    3300012: node_id7
+    3300014: node_id9
     4300000: SailPole.001
     4300002: SailPole
     4300004: HullBottom
     4300006: HullTop
     4300008: Rudder
+    4300010: node_id7
+    4300012: node_id9
+    4300014: node_id12
+    4300016: node_id14
+    4300018: node_id19
+    4300020: node_id19
     9500000: //RootNode
     10800000: Hemi
     13700000: Rudder

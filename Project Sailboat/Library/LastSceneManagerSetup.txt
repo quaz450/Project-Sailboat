@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+- path: Assets/Water Buoyancy/_Scenes/Main.unity
   isLoaded: 1
   isActive: 1
