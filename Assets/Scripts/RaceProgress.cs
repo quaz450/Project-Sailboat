@@ -24,12 +24,13 @@ public class RaceProgress : MonoBehaviour {
 
     public void updateCheckpoint()
     {
-        nextCheckpointTransform = raceCourse.getNextDestination(checkpointsVisited);
-        if (nextCheckpointTransform.gameObject.name.Equals("raceOver"))
+        if (checkpointsVisited >= raceCourse.markerOrder.Count)
         {
+            print("lap over");
+            print("starting new lap");
             checkpointsVisited = 0;
-            nextCheckpointTransform = raceCourse.getNextDestination(checkpointsVisited);
         }
+        nextCheckpointTransform = raceCourse.getNextDestination(checkpointsVisited);
         nextCheckpointId = nextCheckpointTransform.gameObject.GetComponentInChildren<CheckPoint>().id;
     }
 }

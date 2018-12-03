@@ -17,13 +17,6 @@ public class RaceCourseOrder : MonoBehaviour {
 
     public Transform getNextDestination(int numVisited)
     {
-        if(numVisited == markerOrder.Count)
-        {
-            print("race over!");
-            GameObject emptyGO = new GameObject("raceOver");
-            emptyGO.transform.position = new Vector3(0, 0, 0);
-            return new GameObject().transform;
-        }
         return markerOrder[numVisited];
     }
 }
