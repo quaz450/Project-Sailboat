@@ -52,7 +52,6 @@ public class WindChecker : MonoBehaviour {
             performanceFactor = 1 - diff / 90;
         }
         float thrust = performanceFactor * windObject.force;
-        print(thrust);
         if (speed < windObject.force)
         {
             rb.AddRelativeForce(Vector3.forward * windObject.force*performanceFactor);
