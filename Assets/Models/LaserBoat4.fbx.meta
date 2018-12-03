@@ -1,69 +1,33 @@
 fileFormatVersion: 2
-guid: 1a6b8dc7f655fa44e8bbfc23d02ea368
+guid: b4930f58c843f2943926cf398faa0633
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Bone
-    100002: Bone_end
-    100004: Hemi
-    100006: HullBottom
-    100008: HullTop
-    100010: //RootNode
-    100012: Rudder
-    100014: RudderArmature
-    100016: RudderBone
-    100018: RudderBone_end
-    100020: SailArmature
-    100022: SailPole
-    100024: SailPole.001
-    100026: Bone.001
-    100028: Bone.002
-    100030: Bone.002_end
-    100032: Hemi.001
-    100034: Hemi.002
-    100036: SailPole.000
-    400000: Bone
-    400002: Bone_end
-    400004: Hemi
-    400006: HullBottom
-    400008: HullTop
-    400010: //RootNode
-    400012: Rudder
-    400014: RudderArmature
-    400016: RudderBone
-    400018: RudderBone_end
-    400020: SailArmature
-    400022: SailPole
-    400024: SailPole.001
-    400026: Bone.001
-    400028: Bone.002
-    400030: Bone.002_end
-    400032: Hemi.001
-    400034: Hemi.002
-    400036: SailPole.000
-    2100000: Sail
-    2100002: SailPole
-    2100004: HullBottom
-    2100006: Hull
-    2100008: Plastic
-    2300000: HullBottom
-    2300002: HullTop
-    3300000: HullBottom
-    3300002: HullTop
-    4300000: SailPole.001
-    4300002: SailPole
-    4300004: HullBottom
-    4300006: HullTop
-    4300008: Rudder
-    4300010: SailPole.000
+    100000: Boat
+    100002: HullBone
+    100004: //RootNode
+    100006: RudderBone
+    100008: RudderBone_end
+    100010: Sail
+    100012: SailArmature
+    100014: SailBone
+    100016: SailBone_end
+    400000: Boat
+    400002: HullBone
+    400004: //RootNode
+    400006: RudderBone
+    400008: RudderBone_end
+    400010: Sail
+    400012: SailArmature
+    400014: SailBone
+    400016: SailBone_end
+    2100000: Hull
+    2100002: Sail
+    4300000: Sail
+    4300002: Boat
     9500000: //RootNode
-    10800000: Hemi
-    10800002: Hemi.001
-    10800004: Hemi.002
-    13700000: Rudder
-    13700002: SailPole
-    13700004: SailPole.001
-    13700006: SailPole.000
+    13700000: Boat
+    13700002: Sail
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

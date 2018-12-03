@@ -7,7 +7,12 @@ public class WindChecker : MonoBehaviour {
 
     public Transform wind;
     public Wind windObject;
+    public Transform sailTransform;
     public float speed;
+    public float sailAngle;
+    public float idealSailAngle;
+    public float performanceRating;
+    public float performanceFactor;
     Rigidbody rb;
 
     public float windAngle;
@@ -16,23 +21,42 @@ public class WindChecker : MonoBehaviour {
 	void Start () {
         windAngle = 0;
         rb = this.GetComponent<Rigidbody>();
+        sailAngle = 0;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        speed = rb.velocity.magnitude;
         Vector3 windDirection =  wind.transform.forward;
         Vector3 boatDirection = transform.forward;
-        windAngle = Mathf.Abs(Vector3.SignedAngle(boatDirection, -windDirection, Vector3.up));
+        Vector3 sailDirection = sailTransform.forward;
+        windAngle = Vector3.SignedAngle(boatDirection, -windDirection, Vector3.up);
+        sailAngle = Vector3.SignedAngle(-boatDirection, sailDirection, Vector3.up);
 
-        if(windAngle>40 && windAngle < 60)
+
+        if (windAngle * sailAngle < 0 || Mathf.Abs(windAngle) < 45)
         {
-            rb.AddForce(transform.forward * windObject.force * 0.8f);
-        }
-        if(windAngle>60 && windAngle < 130)
-        {
-            rb.AddRelativeForce(Vector3.forward*windObject.force);
+            performanceFactor = -0.01f;
         }
 
-        speed = rb.velocity.magnitude;
-	}
+        else if (Mathf.Abs(windAngle) <= 90)
+        {
+            idealSailAngle = Mathf.Abs(windAngle) - 45;
+            float diff = Mathf.Abs(idealSailAngle - Mathf.Abs(sailAngle));
+            performanceFactor = 1 - diff/90;
+        }
+        else if (Mathf.Abs(windAngle) >90)
+        {
+            float idealSailAngle = windAngle / 2f;
+            float diff = Mathf.Abs(idealSailAngle - sailAngle);
+            performanceFactor = 1 - diff / 90;
+        }
+        float thrust = performanceFactor * windObject.force;
+        print(thrust);
+        if (speed < windObject.force)
+        {
+            rb.AddRelativeForce(Vector3.forward * windObject.force*performanceFactor);
+        }
+
+    }
 }
