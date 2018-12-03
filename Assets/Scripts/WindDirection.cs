@@ -14,17 +14,17 @@ public class WindDirection : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetAxis("Horizontal") < 0)
+        if (Input.GetKeyDown("left"))
         { 
-            if (windDirection <= 0)
-                windDirection = 360;
             windDirection = (windDirection - 1)*Time.deltaTime;
+            if (windDirection < 0)
+                windDirection += 360;
         }
-        else if (Input.GetAxis("Horizontal") > 0)
+        else if (Input.GetKeyDown("right"))
         { 
-            if (windDirection >= 360)
-                windDirection = 0;
             windDirection = (windDirection + 1) * Time.deltaTime;
+            if (windDirection > 360)
+                windDirection -= 360;
         }
 
     }
