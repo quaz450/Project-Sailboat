@@ -4,17 +4,20 @@ using UnityEngine;
 
 
 public class UIManager : MonoBehaviour {
-    public WindDirection windDirection;
+    public WindChecker currentStatus; 
     GameObject windArrow;
+    GameObject sailAngle;
 
     // Use this for initialization
     void Start () {
         windArrow = GameObject.FindGameObjectWithTag("WindArrow");
+        sailAngle = GameObject.FindGameObjectWithTag("SailAngle");
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        windArrow.transform.Rotate(0f, 0f, windDirection.getWindDirection());
-		
-	}
+	void FixedUpdate () {
+        windArrow.transform.Rotate(0f, 0f, currentStatus.getWindDirection());
+        sailAngle.transform.Rotate(0f, 0f, currentStatus.getSailAngle());
+
+    }
 }

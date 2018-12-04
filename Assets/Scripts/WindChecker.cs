@@ -58,4 +58,19 @@ public class WindChecker : MonoBehaviour {
         }
 
     }
+
+    public float getWindDirection()
+    {
+        return wind.transform.forward.z;
+    }
+
+    public float getSailAngle()
+    {
+        return sailAngle;
+    }
+
+    public float getIdealSailAngle()
+    {
+        return idealSailAngle;
+    }
 }
