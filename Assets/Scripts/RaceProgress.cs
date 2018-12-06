@@ -12,8 +12,6 @@ public class RaceProgress : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         checkpointsVisited = 0;
-
-
         updateCheckpoint();
 	}
 	
@@ -32,5 +30,10 @@ public class RaceProgress : MonoBehaviour {
         }
         nextCheckpointTransform = raceCourse.getNextDestination(checkpointsVisited);
         nextCheckpointId = nextCheckpointTransform.gameObject.GetComponentInChildren<CheckPoint>().id;
+    }
+
+    public Transform getNextCP()
+    {
+        return nextCheckpointTransform;
     }
 }
