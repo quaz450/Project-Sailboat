@@ -16,8 +16,8 @@ public class UIManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        windArrow.transform.Rotate(0f, 0f, currentStatus.getWindDirection());
-        sailAngle.transform.Rotate(0f, 0f, currentStatus.getSailAngle());
+        windArrow.transform.localEulerAngles = new Vector3(0f, 0f, currentStatus.getWindDirection());
+        sailAngle.transform.localEulerAngles = new Vector3(0f, 0f, -currentStatus.getSailAngle());
 
     }
 }
